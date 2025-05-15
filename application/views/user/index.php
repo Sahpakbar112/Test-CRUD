@@ -57,6 +57,7 @@
 
         <div class="table-responsive">
             <table id="usersTable" class="table table-bordered table-hover table-striped align-middle">
+
                 <thead class="table-primary">
                     <tr>
                         <th>No</th>
@@ -64,7 +65,8 @@
                         <th>Name</th>
                         <th>Role</th>
                         <th>Status</th>
-                        <th style="min-width: 170px;">Actions</th>
+                        <th class="text-center" style="min-width: 60px;">Actions</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -85,7 +87,7 @@
                                     ? '<span class="badge bg-success">Active</span>'
                                     : '<span class="badge bg-secondary">Inactive</span>' ?>
                         </td>
-                        <td>
+                        <td class="text-center">
                             <a href="<?= site_url("user/detail/" . $user->id) ?>"
                                 class="btn btn-sm btn-secondary">Detail</a>
                             <a href="<?= site_url("user/edit/" . $user->id) ?>"
@@ -95,6 +97,7 @@
                                 <?= $user->is_active ? 'Nonaktifkan' : 'Aktifkan' ?>
                             </button>
                         </td>
+
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
