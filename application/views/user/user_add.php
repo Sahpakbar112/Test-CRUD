@@ -103,7 +103,7 @@
         </div>
     </div>
 
-    <!--  JavaScript Validation -->
+    <!--  JS Validation -->
     <script>
     document.getElementById('userForm').addEventListener('submit', function(e) {
         const name = document.getElementById('name').value;
@@ -126,7 +126,6 @@
     });
     </script>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

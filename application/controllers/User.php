@@ -13,7 +13,7 @@ class User extends CI_Controller {
 public function index()
 {
     $this->load->model('User_model');
-    $data['users'] = $this->User_model->get_all(); // data sudah terfilter
+    $data['users'] = $this->User_model->get_all(); // data  terfilter
     $this->load->view('user/index', $data);
 }
 
@@ -78,7 +78,7 @@ public function save()
         'address'   => $this->input->post('address'),
         'role_id'   => $this->input->post('role_id'),
         'is_active' => $this->input->post('is_active'),
-        'photo'     => null // atau hasil upload photo kalau ada
+        'photo'     => null 
     ];
 
     $this->form_validation->set_rules('name', 'Nama', 'required');
@@ -187,6 +187,7 @@ public function delete($id)
       exit;
     }
   }
+  //fun add 
   private function _uploads_photo() {
     if (!empty($_FILES['photo']['name'])) {
       $config['upload_path'] = './assets/uploads/users/';
@@ -199,6 +200,7 @@ public function delete($id)
     }
     return null;
   }
+  //fun edit
   private function _upload_photo() {
     if (!empty($_FILES['photo']['name'])) {
       $config['upload_path'] = './assets/uploads/users/';

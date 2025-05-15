@@ -123,6 +123,7 @@
 
     });
 
+    //function delete
     function del(id) {
         if (confirm('Yakin ingin menghapus user ini?')) {
             $.post(`<?= site_url("user/delete/") ?>${id}`, function(res) {
@@ -135,7 +136,7 @@
             }, 'json').fail(() => alert('Gagal menghubungi server.'));
         }
     }
-
+    //fun toggle activ/non
     function toggle(id) {
         $.get(`<?= site_url("user/toggle_active/") ?>${id}`, function(res) {
             if (res.status) {
