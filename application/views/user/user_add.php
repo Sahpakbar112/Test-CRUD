@@ -21,7 +21,7 @@
                     </div>
                     <div class="card-body">
 
-                        <!-- Menampilkan error validasi -->
+                        <!-- Menampilkan error validasinya -->
                         <?php if (validation_errors()): ?>
                         <div class="alert alert-danger">
                             <?= validation_errors(); ?>
@@ -48,7 +48,6 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                         </div>
                         <?php endif; ?>
-
 
                         <form action="<?= site_url('user/add') ?>" method="post" enctype="multipart/form-data"
                             id="userForm">
